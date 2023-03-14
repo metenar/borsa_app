@@ -1,0 +1,53 @@
+const mongoose = require("mongoose");
+
+const HisseSchema = new mongoose.Schema(
+    {
+        code:{
+            type:String,
+            required:true,
+        },
+        alimlar:[{
+            adet:{
+                type:Number,
+                required:true,
+            },
+            price:{
+                type:Number,
+                required:true,
+            },
+            date:{
+                type:Date,
+                default:Date.now
+            }
+        }],
+        satislar:[{
+            adet:{
+                type:Number,
+                required:true,
+            },
+            price:{
+                type:Number,
+                required:true,
+            },
+            date:{
+                type:Date,
+                default:Date.now
+            }
+        }],        
+        katsayi:{
+            type:Number
+        },
+        bedelli_bedellsiz:[{
+            adet:{
+                type:Number,
+            },
+            date:{
+                type:Date,
+                default:Date.now
+            }
+        }]        
+    },
+    {timestamps:true}
+);
+
+module.exports=mongoose.model("Hisse",HisseSchema);

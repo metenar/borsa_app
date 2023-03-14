@@ -1,0 +1,28 @@
+.Hissebar{
+    width: 100vw;
+    height: 52px;
+    padding: 10px;
+    background-color: seashell;
+}
+.Hissebar-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.item-container{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rate-green, .rate-red{
+    font-size: 0.7em;
+}
+.rate-green{
+    color: green;
+}
+.rate-red{
+    color: red;
+}
